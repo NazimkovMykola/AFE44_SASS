@@ -1,0 +1,54 @@
+$mainColor: white;
+//міксини - це набір різних стилів поєднаних в одну змінну
+@mixin flex($j,$a,$d) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  flex-direction: $d;
+}
+@mixin font ($f,$s, $c,$w) {
+ font-family: $f;
+    font-size: $s;
+    color: $c;
+    font-weight: $w;
+}
+
+h1 {
+  @include font(Arial,20px, red,bold ) 
+}
+
+header {
+ @include flex(space-between,center, row);
+  padding: 1rem;
+  border-bottom: 1px solid black;
+}
+.dark {
+  background-color: black;
+  header {
+    border-color: $mainColor;
+  }
+  p {
+    color: $mainColor;
+  }
+  h1 {
+    color: $mainColor;
+  }
+  label {
+    color: $mainColor;
+  }
+}
+
+footer {
+    @include flex(center,center ,row )
+}
+//амперсанд
+p {
+    cursor: pointer;
+    transition: all .6s;
+    &:hover {
+        color: red;
+    }
+    &::after{
+        content: 'hello'
+    }
+}

@@ -1,0 +1,54 @@
+/* змінні */
+/* :root {
+   --mainColor: #d5dc14; 
+   --mainFontFamily: Roboto sans-serif;
+}
+
+body {
+    background-color: var(--mainColor) ;
+}
+
+h1 {
+    color: var(--mainColor);
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fs60 {
+font-size: 60px;
+}
+.colorTomato {
+    color: tomato;
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+
+/* nesting або вкладенність */
+.dark {
+    background-color: black;
+    header {
+        border-color:aliceblue;
+    }
+    p {
+        color: aliceblue;
+    }
+    h1 {
+        color: wheat;
+    }
+    label {
+        color: aliceblue;
+    }
+}
+/* .dark h1 {
+  color: wheat;  
+}
+.dark header {
+
+} */
